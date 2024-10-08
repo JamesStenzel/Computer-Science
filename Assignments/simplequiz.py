@@ -1,14 +1,14 @@
 a = input("what is 5 + 3\n>")
-b = input("what is the capital of Kiribati\n>")
-c = input("what is the 31st state to join the union\n>")
+b = input("what is the capital of Kiribati\n>").capitalize()
+c = input("what is the 31st state to join the union\n>").capitalize()
 d = input("what is 6 ^ 4\n>")
-e = input("what is the name of the can of dog food in back to the future\n>") # kal kan
+e = input("When are we getting the donuts\n>").lower()
 
 aa = a == "8"
 bb = b == "Tarawa"
 cc = c == "California"
 dd = d == "1296"
-ee = e == "Kal Kan"
+ee = e == "tomorrow"
 
 def tally_score():
     global score
@@ -23,6 +23,6 @@ def tally_score():
         score += 1
     if ee == True:
         score += 1
+    print(str(score) + "/5")
 
 tally_score()
-print(str(score) + "/5")
