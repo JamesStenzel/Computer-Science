@@ -533,8 +533,8 @@ def guam_1():
     choice = int(input("> "))
 
     if choice == 1:
-        print("They agree and even bring you back to New Jersey")
-        street()
+        print("They agree")
+        guam_2()
     elif choice == 2:
         end_10()
     else:
