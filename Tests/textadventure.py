@@ -3,7 +3,7 @@ print("Welcome to <insert creative title>!")
 print("\nWe start off in the fictional hellscape known by the name of New Jersey.")
 print("Your only job is to escape.")
 
-money = 160000
+money = 16.49
 ski_mask = False
 apples = 0
 savings_money = 8276.98
@@ -67,7 +67,7 @@ def start():
     if choice == 1:
         a = random.randint(1,20)        #Rolls d20
         print(a)
-        if a >= 10:                     #Checks if over 10
+        if a >= 10:                     #Checks if it rolled greater than or equal to 10
             kitchen()
         else:
             end_1()
@@ -101,7 +101,7 @@ def garage():
     global choice1
     print("You are in the garage. Pick a vehicle.")
     print("1. 1987 Buick Grand National")
-    print("2. 2017 Cadillac Escalde V")
+    print("2. 2017 Cadillac Escalade V")
     print("3. 1997 Toyoto Corolla")
     print("4. A mule you have hitched to the wall")
 
@@ -123,14 +123,14 @@ def street():
     print("1. The store (You have $"+str(money)+")" )
     print("2. The bank")
     print("3. The Lincoln Tunnel (The tunnel that leads out of New Jersey)")
-    print("4. The Jets game")
+    print("4. The Jets game")                 #both the Jets and Giants are in New Jersey, despite having New York in the name
     print("5. The Giants game")
     print("6. Some guy selling a cargo plane on Facebook Marketplace")
     print("7. Airport")
 
     choice = int(input("> "))
     if choice == 1:
-        if choice1 == 4:
+        if choice1 == 4:                                            #Only shows up if you have the mule
             print("It takes hours to get there due to the mule.")
         store()
     elif choice == 2:
@@ -162,7 +162,7 @@ def store():
     print("1. a ski mask ($5.00)")
     print("2. 6 dozen apples ($32.49)")
     print("3. Leave")
-    if choice1 == 4:
+    if choice1 == 4:                            #Checks if you have the mule
         print("4. mule steroids ($0.78)")
     
     choice = int(input("> "))
@@ -173,7 +173,7 @@ def store():
             print("You already have one of these")
             store()
         
-        elif money >= 5:
+        elif money >= 5:                        #Checks if you have enough money before taking it
             print("You buy the ski mask.")
             money = money - 5.00
             ski_mask = True
@@ -203,7 +203,7 @@ def store():
             print("Your mule is now much faster")
             money = money - 0.78
             print("you are now at $"+str(money))
-            choice1 = 2                             #The game no longer says it takes hours to get somewhere
+            choice1 = 2                             #Dialouge unique to the mule choice doesn't show up
             store()
 
         else:
@@ -229,6 +229,7 @@ def bank():
     elif choice == 2:
         if ski_mask == True:
             a = random.randint(1,20)
+            print(a)
             if a >= 6:
                 c = random.randint(100,25000)
                 print("successfully robbed the bank for $"+str(c)+"!")
@@ -238,6 +239,7 @@ def bank():
                 end_4()
         else:
             b = random.randint(1,20)
+            print(b)
             if b >= 10:
                 d = random.randint(100,25000)
                 print("Successfully robbed the bank for $"+str(d)+"!")
@@ -276,6 +278,7 @@ def mugged():
         lincoln_tunnel()
     elif choice == 2:
         a = random.randint(1,20)
+        print(a)
         if a >= 6:
             print("You successfully escape")
             lincoln_tunnel()
@@ -287,6 +290,7 @@ def mugged():
 
 def gas_station():
     a = random.randint(1,10)
+    print(a)
     if a >= 5:
         print("When you stop at a gas station, you are knocked unconscious, and wake up in a sewer surrounded by rats")
         print("1. Start talking to the rats")
@@ -311,7 +315,7 @@ def lincoln_tunnel():
     if choice == 1:
         end_7()
     elif choice == 2:
-        end_8()
+        end_8()         #The worst ending
     else:
         print("Invalid answer, try again")
 
@@ -389,6 +393,7 @@ def airport():
             airport()
     elif choice == 2:
         a = random.randint(1,20)
+        print(a)
         if a >= 16:
             print("You fly to Guam with your new plane")
             fly()
@@ -425,6 +430,7 @@ def time_machine():
         guam_2()
     elif choice == 2:
         a = random.randint(1,20)
+        print(a)
         if a >= 4:
             box()
         else:
@@ -494,6 +500,7 @@ def rat_king():
     choice = int(input("> "))
 
     if choice == 1:
+        print("You beat him senseless and then put his crown on your head.")
         end_6()
     elif choice == 2:
         print("you find the tour guide")
