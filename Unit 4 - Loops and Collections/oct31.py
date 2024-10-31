@@ -19,3 +19,13 @@ best_elden_ring_weapons.pop(4)
 #remove item by value
 #removes first occurrance of an item
 best_elden_ring_weapons.remove("Moonveil")
+
+#add new item to the end of the list
+best_elden_ring_weapons.append("Mohgwyn's Sacred Spear")
+
+numbers = [random.randint(1,100),random.randint(1,100),random.randint(1,100),random.randint(1,100),random.randint(1,100),]
+print(numbers)
+numbers.sort()
+print(numbers)
+
+print(best_years.index(1985))
